@@ -9,3 +9,5 @@ Following the completion of the first phase, which signifies that the deadline h
 During this stage, users can access their account and view a list of other users' files as well as their own, allowing them to select the file they need to check their similarity score. and the user can now view the similarity score between their file and the chosen one in a graphical format, which makes it extremely difficult for the user to understand.
 
 **The report that was uploaded above contains all of the information regarding the files and various modules of this project.  and we're pleased to report that we've written a standard research paper on the subject for IEEE.  also provides a link to the paper.**
+
+**Paper Link: **  https://ieeexplore.ieee.org/document/10837475
