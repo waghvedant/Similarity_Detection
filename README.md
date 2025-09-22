@@ -1,14 +1,11 @@
-# Similarity_Detection
-Here I have created an algorithm for detecting the similarity of your documents with the others documents in the dataset. Two algorithm I have used 
-1. Cosine Similarity for word detection
-2. Latent Symantic analyis for meaning matching.
+Here, we are demonstrating the **Plagiarism Detection Tool**, and the project's complete workflow and execution module are provided below. Finding the similarity score between various documents is essentially the main idea so that we can examine how similar various documents are to one another. We have employed two algorithms to accomplish this since the algorithm determines similarity not only by the number of words but also by the semantic analysis of the document. which is explained below.
+In essence, you have to execute out the project. py file that will generate a local host address on which our system as a whole operates.  This project was created with Python and its flask module, which serves as an intermediary between front-end modules.  To run the files, it will automatically create the databases. As explained below, our project's primary goal is to work in two phases: before and after the deadline.
 
-Herewith I have created modules:
-1) preprocessing : It is for preprocessing the files and main algorithm will work on raw data content
-2) BagOfWords : Here is counting the words in the document in order to find out content matching from each document
-3) Term Frequency and Inverse Document Frequency : Here it calculte the terms occurence in the document based on formula.
-4) Document Calculator: Here it calculate the vector multiplication of TF and IDF
-5) Cosine : Actual similarity is checked here having an algorithm which works on processed documents result is on words content.
-6)LSA :  Actual similarity is checked here having an algorithm which works on processed documents result is on meanning of document
+**1) Before Deadline Phase**
+You are free to upload files during this phase, and we have access to any file types the user requests, such as PDFs, TXTs, and Docs, for verification. To upload a file, the user must first create an account and then log in.  First-phase tasks include building a database for the user, which stores user account data, and preprocessing files after they are uploaded, which stores the raw data in the database.In order to run the algorithm on raw data, this phase entails preprocessing the file, which includes natural language processing and turning the file into raw data.
+Following the completion of the first phase, which signifies that the deadline has passed, all user-stored files will be sent to the algorithm for determining plagiarism. This algorithm includes two crucial algorithms: cosine similarity and latent semantic analysis, which determine similarity based on words and meaning. The entire data will then be stored in the database, and the user will be able to see that their score has been checked.
 
-First 3 modules work individually on every modules and next 3 modules work integrally when all the files are uploading for checking similarity.
+**1) After Deadline Phase**
+During this stage, users can access their account and view a list of other users' files as well as their own, allowing them to select the file they need to check their similarity score. and the user can now view the similarity score between their file and the chosen one in a graphical format, which makes it extremely difficult for the user to understand.
+
+**The report that was uploaded above contains all of the information regarding the files and various modules of this project.  and we're pleased to report that we've written a standard research paper on the subject for IEEE.  also provides a link to the paper.**
