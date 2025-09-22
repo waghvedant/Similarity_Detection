@@ -10,4 +10,4 @@ During this stage, users can access their account and view a list of other users
 
 **The report that was uploaded above contains all of the information regarding the files and various modules of this project.  and we're pleased to report that we've written a standard research paper on the subject for IEEE.  also provides a link to the paper.**
 
-**Paper Link: **  https://ieeexplore.ieee.org/document/10837475
+**Paper Link:**   https://ieeexplore.ieee.org/document/10837475
