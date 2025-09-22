@@ -1,1 +1,0 @@
-Software project scheduling distributes estimated effort across the planned project duration.
