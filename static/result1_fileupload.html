@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html class="no-js" lang="">
+    <head>
+        <!-- meta charset -->
+        <meta charset="utf-8">
+        <!-- site title -->
+        <title>File Upload</title>
+        <!-- meta description -->
+        <meta name="description" content="">
+        <!-- mobile viwport meta -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- fevicon -->
+        <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+        
+        <!-- ================================
+        CSS Files
+        ================================= -->
+              <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i|Open+Sans:400,600,700,800" rel="stylesheet">
+               <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i|Open+Sans:400,600,700,800" rel="stylesheet">
+             <link rel="stylesheet" href= "{{ url_for('static',filename='css/themefisher-fonts.min.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static',filename='css/owl.carousel.min.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static',filename='css/bootstrap.min.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static',filename='css/main.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static',filename='css/dark.css') }}">
+        <link id="color-changer" rel="stylesheet" href="css/colors/color-0.css">
+        <link id="color-changer" rel="stylesheet" href="css/colors/color-0.css">
+    </head>
+
+    <body class="dark">
+
+        <div class="preloader">
+            <div class="loading-mask"></div>
+            <div class="loading-mask"></div>
+            <div class="loading-mask"></div>
+            <div class="loading-mask"></div>
+            <div class="loading-mask"></div>
+        </div>
+         <div class="navbar-header">
+      <div>
+    <ul class="nav navbar-nav">
+                <li class="active"><a href="/">Home</a></li>
+      <li><a href="/welcome">Welcome</a></li>
+      <li><a href="/login">User login</a></li>
+      <li><a href="/admin_log_next">Admin login</a></li>
+      <li><a href="/contact">Contact</a></li>
+      <li><a href="/feedback">Feedback</a></li>
+      <li><a href="/facts">Facts</a></li>
+      <li><a href="/help">Help</a></li>
+    </ul>   
+  </div>
+</nav>
+        <main class="site-wrapper">
+            <div class="pt-table">
+                <div class="pt-tablecell page-about relative">
+                    <!-- .close -->
+                    <a href="./" class="page-close"><i class="tf-ion-close"></i></a>
+                    <!-- /.close -->
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xs-12 col-md-offset-1 col-md-10 col-lg-offset-2 col-lg-8">
+                                <div class="page-title text-center">
+                                    <h2><span class="primary">FILE UPLOADED SUCCESSFULLY!!</span> 
+                                    	
+                                </div>
+                                
+                            </div>
+
+
+                                </div> <!-- /.col -->
+                                <a href="/">LOG OUT</a>
+
+                        </div> <!-- /.row -->
+
+                    </div> <!-- /.container -->
+                       
+                    <!-- /.container -->
+                </div> <!-- /.pt-tablecell -->
+            </div> <!-- /.pt-table -->
+        </main> <!-- /.site-wrapper -->
+        
+        <!-- ================================
+        JavaScript Libraries
+        ================================= -->
+              <script src="{{url_for('static', filename='js/vendor/jquery-2.2.4.min.js')}}"></script>
+        <script src="{{url_for('static', filename='js/vendor/bootstrap.min.js')}}"></script>
+        <script src="{{url_for('static', filename='js/jquery.easing.min.js')}}"></script>
+        <script src="{{url_for('static', filename='js/isotope.pkgd.min.js')}}"></script>
+        <script src="{{url_for('static', filename='js/jquery.nicescroll.min.js')}}"></script>
+        <script src="{{url_for('static', filename='js/owl.carousel.min.js')}}"></script>
+        <script src="{{url_for('static', filename='js/jquery-validation.min.js')}}"></script>
+        <script src="{{url_for('static', filename='js/form.min.js')}}"></script>
+        <script src="{{url_for('static', filename='js/main.js')}}"></script>
+ 
+    </body>
+</html>
