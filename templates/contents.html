@@ -1,0 +1,116 @@
+
+<!-- Page for showing contents to admin-->
+
+<!DOCTYPE html>
+<html>
+<head>
+
+
+
+   <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900"
+      rel="stylesheet"
+    />
+
+    <title>files</title>
+<!--
+Reflux Template
+https://templatemo.com/tm-531-reflux
+-->
+    <!-- Bootstrap core CSS -->
+     <link href="/static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+
+   
+    <!-- Additional CSS Files -->
+   
+    <link rel="stylesheet" href="\static\assets\css\fontawesome.css" />
+    <link rel="stylesheet" href="\static\assets\css\templatemo-style.css" />
+    <link rel="stylesheet" href="\static\assets\css\owl.css" />
+    <link rel="stylesheet" href="\static\assets\css\lightbox.css" /> 
+</head>
+
+<body>
+
+    <div id="page-wraper">
+      <!-- Sidebar Menu -->
+      <div class="responsive-nav">
+        <i class="fa fa-bars" id="menu-toggle"></i>
+        <div id="menu" class="menu">
+          <i class="fa fa-times" id="menu-close"></i>
+          <div class="container">
+            <div class="image">
+             <a href="#"><img src="\static\assets\images\admin.png" alt="" /></a> 
+            </div>
+            <div class="author-content">
+               <h4>Admin</h4>
+              <span>Plagiarism</span>
+            </div>
+            <nav class="main-nav" role="navigation">
+              <ul class="main-menu">
+                <li><a href="">About Me</a></li>
+                <li><a href="">Uploaded Files</a></li>
+                <li><a href=""> Users ID Password</a></li>
+                <li><a href=""> CS Data</a></li>
+                <li><a href="">LSA Data </a></li>
+                <li><a href="">LSA Data </a></li>
+                <li><a href="">Help </a></li>
+
+               
+              </ul>
+            </nav>
+            <div class="copyright-text">
+               <button onclick="location.href='/AdminLogin'">Home</button>
+          </div>
+        </div>
+      </div>
+
+
+
+
+     <section class="section about-me" data-section="section1">
+        <div class="container">
+          <div class="section-heading">
+            <h2>Document's Data</h2>
+            <div class="line-dec"></div>
+            <span>
+               <h5> Hii Admin Here you can see Original as well as Preprocessed data of uploaded documents.</h5>
+               </span
+            >
+
+  <br> <br>
+
+ 
+<center>   
+<h5>Selected File ID : {{id}}</h5>
+ 
+<h5>Original content of Selected File ID </h5>
+<textarea id="w3review" name="w3review" rows="10" cols="90">
+ {{ocon}}
+</textarea>
+
+<br> <br>
+<h5>Preprocessed content of Selected File ID </h5>
+<textarea id="w3review" name="w3review" rows="10" cols="90">
+   {{pcon}} 
+</textarea>
+
+
+
+    </center>
+     
+      </section> 
+ 
+
+</body>
+</html>
+
+
+
+

@@ -1,0 +1,231 @@
+<!--<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="refresh" content="5">
+   <title></title>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<style type="text/css">
+body {
+    font-family: "Lato", sans-serif;
+}
+
+
+
+.main-head{
+    height: 150px;
+    background: #FFF;
+   
+}
+
+.sidenav {
+    height: 100%;
+    background-color: #000;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+
+.main {
+    padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+}
+
+@media screen and (max-width: 450px) {
+    .login-form{
+        margin-top: 10%;
+    }
+
+    .register-form{
+        margin-top: 10%;
+    }
+}
+
+@media screen and (min-width: 768px){
+    .main{
+        margin-left: 40%; 
+    }
+
+    .sidenav{
+        width: 40%;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+    }
+
+    .login-form{
+        margin-top: 20%;
+    }
+
+    .register-form{
+        margin-top: 20%;
+    }
+}
+
+
+.login-main-text{
+    margin-top: 20%;
+    padding: 60px;
+    color: #fff;
+}
+
+.login-main-text h2{
+    font-weight: 300;
+}
+
+.btn-black{
+    background-color: #000 !important;
+    color: #fff;
+}
+</style>
+</head>
+<body>
+
+<!------ Include the above in your HEAD tag ---------->
+<!--
+<div class="sidenav">
+         <div class="login-main-text">
+<a href="/Second">GO BACK TO FILE CHOOSING PAGE </a> <br><br><br>
+<a href="/CSGraphOTO"> CS One to One Graph </a> <br>
+<a href="/CSGraphOTM"> CS One to many Graph </a><br>
+<a href="/LSAGraphOTM"> LSA One to One Graph </a> <br>
+<a href="/File"> Contents Of Files To Be Compared </a> <br>
+         </div>
+      </div>
+      <div class="main">
+	<h1>LATENT SEMANTIC ANALYSIS SIMILARITY RATIO  </h1>
+         <div class="col-md-6 col-sm-12">
+            <div class="login-form">
+
+	    <img src="/static/oTolsa.jpeg" width="400" height="350">
+            </div>
+         </div>
+      </div>
+
+
+</body>
+</html>
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+<meta http-equiv="refresh" content="3">
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900"
+      rel="stylesheet"
+    />
+
+    <title></title>
+<!--
+Reflux Template
+https://templatemo.com/tm-531-reflux
+-->
+    <!-- Bootstrap core CSS -->
+    <link href="/static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="/static/assets/css/fontawesome.css" />
+    <link rel="stylesheet" href="/static/assets/css/templatemo-style.css" />
+    <link rel="stylesheet" href="/static/assets/css/owl.css" />
+    <link rel="stylesheet" href="/static/assets/css/lightbox.css" />
+<style>
+img {
+  border: 5px solid black;
+  border-radius: 5px;
+
+}
+.button {
+  background-color: black; /* Green */
+  border: none;
+  color: white;
+  padding: 10px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 10px;
+  margin: 4px 2px;
+  cursor: pointer;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+}
+.button1:hover {
+background-color: #4CAF50;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+</style>
+  </head>
+
+  <body>
+    <div id="page-wraper">
+      <!-- Sidebar Menu -->
+      <div class="responsive-nav">
+        <i class="fa fa-bars" id="menu-toggle"></i>
+        <div id="menu" class="menu">
+          <i class="fa fa-times" id="menu-close"></i>
+          <div class="container">
+
+            <div class="author-content">
+              <button class="button button1"><a href="/Second">GO BACK TO FILE CHOOSING PAGE </a></button>
+            
+            </div>
+            <nav class="main-nav" role="navigation">
+              <ul class="main-menu">
+                <li><a href="/CSoto"> Word Based One to One Graph </a></li>
+                <li><a href="/CSotm"> Word Based One to Many Graph </a></li>
+                <li><a href="/LSAotm"> Meaning Based One to Many Graph </a></li>
+		<li><a href="/File"> Contents Of Files To Be Compared </a></li>
+		<li><a href="/"> Log Out </a></li>
+              </ul><br><br><br>
+<h3 style="color:white;"><strong><i>Happy Browsing :)</i> </strong></h3>
+            </nav>
+            
+          </div>
+        </div>
+      </div>
+
+      <section class="section about-me" data-section="section1">
+        <div class="container">
+          <div class="section-heading">
+            <h2>Meaning Based Similarity Of <span style="color:#99ff66;font-size:30px;"><strong><u><i>{{name}}</i></u></strong></span> WRT To <span style="color:#99ff66;font-size:30px;"><strong><u><i>{{selected}}</i></u></strong> </span>Document</h2>
+            <div class="line-dec"></div>
+<img src="/static/oTolsa.jpeg" width="400" height="350">
+          </div>
+          <div class="left-image-post">
+            <div class="row">
+              <div class="col-md-6">
+
+              </div>
+              <div class="col-md-6">
+                
+              </div>
+            </div>
+          </div>
+          <div class="right-image-post">
+            <div class="row">
+              <div class="col-md-6">
+               
+              </div>
+              <div class="col-md-6">
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+  </body>
+</html>

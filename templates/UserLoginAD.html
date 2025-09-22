@@ -1,0 +1,278 @@
+<!--<!DOCTYPE html>
+<html>
+<head>
+   <title></title>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<style type="text/css">
+body {
+    font-family: "Lato", sans-serif;
+}
+
+
+
+.main-head{
+    height: 150px;
+    background: #FFF;
+   
+}
+
+.sidenav {
+    height: 100%;
+    background-color: #000;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+
+.main {
+    padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+}
+
+@media screen and (max-width: 450px) {
+    .login-form{
+        margin-top: 10%;
+    }
+
+    .register-form{
+        margin-top: 10%;
+    }
+}
+
+@media screen and (min-width: 768px){
+    .main{
+        margin-left: 40%; 
+    }
+
+    .sidenav{
+        width: 40%;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+    }
+
+    .login-form{
+        margin-top: 20%;
+    }
+
+    .register-form{
+        margin-top: 20%;
+    }
+}
+
+
+.login-main-text{
+    margin-top: 20%;
+    padding: 60px;
+    color: #fff;
+}
+
+.login-main-text h2{
+    font-weight: 300;
+}
+
+.btn-black{
+    background-color: #000 !important;
+    color: #fff;
+}
+</style>
+</head>
+<body>
+<div class="sidenav">
+         <div class="login-main-text">
+            <h2>SIGN IN HERE TO VIEW YOUR SIMILARITY DATA</h2>
+           
+         </div>
+      </div>
+      <div class="main">
+         <div class="col-md-6 col-sm-12">
+            <div class="login-form">
+<form action = "{{ url_for('check') }}" method = "POST">
+         <h3>Check Your Report Afetr Deadline</h3>
+         Username<br>
+         <input type = "text" name = "nm" /></br>
+        Password<br>
+         <input type = "password" name = "ps" /></br>
+
+          {% if error %}  
+        <p><strong>Error</strong>: {{error}}</p>  
+         {% endif %}
+         
+         
+         <input type = "submit" value = "submit" /><br>
+      </form>
+            </div>
+         </div>
+      </div>
+
+
+</body>
+</html>
+
+<!--
+<form action = "{{ url_for('check') }}" method = "POST">
+         <h3>Check Your Report Afetr Deadline</h3>
+         Username<br>
+         <input type = "text" name = "nm" /></br>
+        Password<br>
+         <input type = "password" name = "ps" /></br>
+
+          {% if error %}  
+        <p><strong>Error</strong>: {{error}}</p>  
+         {% endif %}
+         
+         
+         <input type = "submit" value = "submit" /><br>
+      </form>
+<br>
+      <a href="/AdminLogin">Admin Login</a><br>
+     <a href="/login_user">User Login</a><br>
+     
+     </body>
+</html>-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900"
+      rel="stylesheet"
+    />
+
+    <title>Offline Plagiarism Tool</title>
+<!--
+Reflux Template
+https://templatemo.com/tm-531-reflux
+-->
+    <!-- Bootstrap core CSS -->
+<link href="/static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="/static/assets/css/fontawesome.css" />
+    <link rel="stylesheet" href="/static/assets/css/templatemo-style.css" />
+    <link rel="stylesheet" href="/static/assets/css/owl.css" />
+    <link rel="stylesheet" href="/static/assets/css/lightbox.css" />
+    <style type="text/css">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: "Lato", sans-serif;}
+form {border: 3px solid #f1f1f1;}
+
+input[type=text], input[type=password] {
+  width: 60%;
+  padding: 10px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #000 !important;
+    color: #fff;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+
+
+.container {
+  padding:25px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+
+      input[type=submit]
+{
+  background-color: #000 !important;
+    color: #fff;
+  padding: 5px 10px;
+  margin: 2px 0;
+  border: none;
+  cursor: pointer;
+  width: 10%;
+}
+    </style>
+  </head>
+
+  <body>
+    <div id="page-wraper">
+      <!-- Sidebar Menu -->
+      <div class="responsive-nav">
+        <i class="fa fa-bars" id="menu-toggle"></i>
+        <div id="menu" class="menu">
+          <i class="fa fa-times" id="menu-close"></i>
+          <div class="container">
+            
+            <div class="author-content">
+              <h4>Rules for user login</h4>
+              
+            </div>
+            <nav class="main-nav" role="navigation">
+              <ul class="main-menu">
+                <li><a href="#section1">1.Your Username should be Valid.</a></li>
+                <li><a href="#section2">2.Your Password should be Valid.</a></li>
+                
+             
+              </ul><br><br><br>
+<h3 style="color:white;"><strong><i>Happy Browsing :)</i> </strong></h3>
+            </nav>
+            
+          </div>
+        </div>
+      </div>
+      <h6 align="right"><a href="/" >
+<input type="submit" value="HOME"></a></h6>
+
+      <section class="section about-me" data-section="section1">
+        <h1 align="center" style="font-family:'Lato'; font-size: 80px; ">Login Form</h1>
+           <center>
+<div class="main">
+   <br><br>
+         <div class="col-md-6 col-sm-12">
+            <div class="login-form">
+            
+<form action="{{ url_for('check') }}" method="post">
+  <div class="container">
+    <label for="nm"><font size="5px"><b>Username   </b></font></label>
+    <input type="text" placeholder="Enter Username" name="nm" required>
+<br>
+    <label for="ps"><font size="5px"><b>Password </b></font></label>
+    <input type="password" placeholder="Enter Password" name="ps" required>
+        
+    <button type="submit">Login</button>
+ {% if error %}  
+        <p><strong>Error</strong>: {{error}}</p>{% endif %}   
+  </div>
+ 
+  <div class="container" style="background-color:#f1f1f1">  
+  </div> </div>
+           
+  
+      </section> </script>
+  </body>
+</html>

@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900"
+      rel="stylesheet"
+    />
+
+    <title>Offline Plagiarism Tool</title>
+<!--
+Reflux Template
+https://templatemo.com/tm-531-reflux
+-->
+    <!-- Bootstrap core CSS -->
+    <link href="{{ url_for('static',filename='vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet" />
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="{{ url_for('static',filename='assets/css/fontawesome.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static',filename='assets/css/templatemo-style.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static',filename='assets/css/owl.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static',filename='assets/css/lightbox.css') }}" />
+    <style type="text/css">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: "Lato", sans-serif;}
+form {border: 3px solid #f1f1f1;}
+
+input[type=text], input[type=password] {
+  width: 60%;
+  padding: 10px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #000 !important;
+    color: #fff;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+
+
+.container {
+  padding:25px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+
+      input[type=submit]
+{
+  background-color: #000 !important;
+    color: #fff;
+  padding: 5px 10px;
+  margin: 2px 0;
+  border: none;
+  cursor: pointer;
+  width: 10%;
+}
+    </style>
+  </head>
+
+  <body>
+    <div id="page-wraper">
+      <!-- Sidebar Menu -->
+      <div class="responsive-nav">
+        <i class="fa fa-bars" id="menu-toggle"></i>
+        <div id="menu" class="menu">
+          <i class="fa fa-times" id="menu-close"></i>
+          <div class="container">
+            
+            <div class="author-content">
+              <h4>Rules for User Registration</h4>
+              
+            </div>
+            <nav class="main-nav" role="navigation">
+              <ul class="main-menu">
+                <li><a href="#section1">1.Username should be Unique.</a></li>
+                <li><a href="#section2">2.Password should contain 8 letters.</a></li>
+                <li><a href="#section3">3.Your Password should contain:</a></li>
+             <li><a href="#section3">*Uppercase(A)</a></li>
+             <li><a href="#section3">*Lowercase(a)</a></li>
+             <li><a href="#section3">*Number</a></li>
+             
+             
+              </ul>
+            </nav>
+            
+          </div>
+        </div>
+      </div>
+      <h6 align="right"><a href="/" >
+<input type="submit" value="HOME"></a></h6>
+
+      <section class="section about-me" data-section="section1">
+        <h1 align="center" style="font-family:'Lato'; font-size: 60px; ">Registration Form</h1>
+           <center>
+<div class="main">
+   <br><br>
+         <div class="col-md-6 col-sm-12">
+            <div class="login-form">
+            
+<form name="myForm" action = "{{ url_for('signup_user') }}" method = "POST" onsubmit="return validateForm()">
+  <div class="container">
+    <label for="nm"><font size="5px"><b>Username   </b></font></label>
+    <input type="text" placeholder="Enter Username" name="nm" required>
+<br>
+<label for="em"><b><font size="5px">Email Id:</font></b></label>
+    <input type="text" placeholder="Enter Email Id" name="em" required><br>
+    <label for="ps"><font size="5px"><b>Password </b></font></label>
+    <input type = "password" name = "ps" id="ps" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" placeholder="Enter Password" required/></br>
+      <br>
+    <button type="submit">Signup</button>
+   <br> {{ msg }}<br>   
+  </div>  
+ 
+  <div class="container" style="background-color:#f1f1f1">  
+  </div> </div><center>
+   
+           
+  
+      </section>
+
+<script>
+var user=document.getElementById("nm")
+var myInput = document.getElementById("ps");
+var letter = document.getElementById("letter");
+var capital = document.getElementById("capital");
+var number = document.getElementById("number");
+var length = document.getElementById("length");
+
+
+
+
+
+// When the user clicks on the password field, show the message box
+myInput.onfocus = function() {
+  document.getElementById("message").style.display = "block";
+}
+
+// When the user clicks outside of the password field, hide the message box
+myInput.onblur = function() {
+  document.getElementById("message").style.display = "none";
+}
+
+// When the user starts to type something inside the password field
+myInput.onkeyup = function() {
+  // Validate lowercase letters
+  var lowerCaseLetters = /[a-z]/g;
+  if(myInput.value.match(lowerCaseLetters)) {  
+    letter.classList.remove("invalid");
+    letter.classList.add("valid");
+  } else {
+    letter.classList.remove("valid");
+    letter.classList.add("invalid");
+  }
+  
+  // Validate capital letters
+  var upperCaseLetters = /[A-Z]/g;
+  if(myInput.value.match(upperCaseLetters)) {  
+    capital.classList.remove("invalid");
+    capital.classList.add("valid");
+  } else {
+    capital.classList.remove("valid");
+    capital.classList.add("invalid");
+  }
+
+  // Validate numbers
+  var numbers = /[0-9]/g;
+  if(myInput.value.match(numbers)) {  
+    number.classList.remove("invalid");
+    number.classList.add("valid");
+  } else {
+    number.classList.remove("valid");
+    number.classList.add("invalid");
+  }
+  
+  // Validate length
+  if(myInput.value.length >= 8) {
+    length.classList.remove("invalid");
+    length.classList.add("valid");
+  } else {
+    length.classList.remove("valid");
+    length.classList.add("invalid");
+  }
+}
+
+
+    <!-- Scripts -->
+    <!-- Bootstrap core JavaScript -->
+    <script src="{{url_for('static', filename='vendor/jquery/jquery.min.js')}}"></script>
+    <script src="{{url_for('static', filename='vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+
+    <script src="{{url_for('static', filename='assets/js/isotope.min.js')}}"></script>
+    <script src="{{url_for('static', filename='assets/js/owl-carousel.js')}}"></script>
+    <script src="{{url_for('static', filename='assets/js/lightbox.js')}}"></script>
+    <script src="{{url_for('static', filename='assets/js/custom.js')}}"></script>
+    <script>
+      //according to loftblog tut
+      $(".main-menu li:first").addClass("active");
+
+      var showSection = function showSection(section, isAnimate) {
+        var direction = section.replace(/#/, ""),
+          reqSection = $(".section").filter(
+            '[data-section="' + direction + '"]'
+          ),
+          reqSectionPos = reqSection.offset().top - 0;
+
+        if (isAnimate) {
+          $("body, html").animate(
+            {
+              scrollTop: reqSectionPos
+            },
+            800
+          );
+        } else {
+          $("body, html").scrollTop(reqSectionPos);
+        }
+      };
+
+      var checkSection = function checkSection() {
+        $(".section").each(function() {
+          var $this = $(this),
+            topEdge = $this.offset().top - 80,
+            bottomEdge = topEdge + $this.height(),
+            wScroll = $(window).scrollTop();
+          if (topEdge < wScroll && bottomEdge > wScroll) {
+            var currentId = $this.data("section"),
+              reqLink = $("a").filter("[href*=\\#" + currentId + "]");
+            reqLink
+              .closest("li")
+              .addClass("active")
+              .siblings()
+              .removeClass("active");
+          }
+        });
+      };
+
+      $(".main-menu").on("click", "a", function(e) {
+        e.preventDefault();
+        showSection($(this).attr("href"), true);
+      });
+
+      $(window).scroll(function() {
+        checkSection();
+      });
+    </script>
+  </body>
+</html>
